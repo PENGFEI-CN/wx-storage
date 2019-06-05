@@ -1,0 +1,27 @@
+<view class="container" bindtouchstart="containerTap">
+      <image class='bgimg' src='../../images/2.png'></image>
+  <block wx:if="{{ todos.length }}">
+    <view  class="things">
+      <view  wx:if = "{{dangers.length}}" class='dangers'>
+        <text style='display:block;margin:40rpx auto;'>即将/已过期物品列表：</text>
+        <contents bindthingremove = "onThingRemove" wx:for="{{dangers}}" wx:key="{{index}}"  data-index="{{ index }}" content = "{{item.name}}" startdate = "{{item.startdate}}" enddate =  "{{item.enddate}}" days = "{{item.days}}" lastdays = "{{item.lastdate}}">
+        </contents>
+      </view>
+      <view wx:else class='goods'>
+        <text class='text'>暂无即将过期物品，部分物品列表：</text>
+        <contents bindthingremove = "onThingRemove" wx:for="{{todos[currentstorage].things}}" wx:key="{{index}}"  data-index="{{ index }}" content = "{{item.name}}" startdate = "{{item.startdate}}" enddate =  "{{item.enddate}}" days = "{{item.days}}" lastdays = "{{item.lastdate}}">
+        </contents>
+      </view>
+    </view>
+  </block>
+
+  <block wx:else>
+    <view class="empty">
+
+      <text class="title">储物柜是空的</text>
+      <text class="content">请您前往 储物柜 添加储物柜及物品</text>
+    </view>
+  </block>
+
+</view>
+<view class="ripple" style="{{rippleStyle}}"></view>

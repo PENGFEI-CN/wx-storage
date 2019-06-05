@@ -1,0 +1,103 @@
+/* components/Item/Item.wxss */
+
+.item-container {
+  padding: 5rpx;
+}
+.start{
+  background-color: rgb(220, 245, 188);
+}
+.end{
+  background-color: rgb(189, 253, 197)
+}
+.start .end{
+  display:flex;
+  flex-direction: row;
+}
+.item {
+  display: flex;
+  align-items: center;
+}
+
+
+.item .checkbox {
+  margin-right: 20rpx;
+}
+
+.item .content {
+
+  color: rgb(100, 100, 100);
+}
+.content{
+  flex: 1;
+  align-items: center;
+  font-size: 30rpx;
+  text-align: center; 
+}
+
+.item icon {
+  margin-left: 10rpx;
+}
+.name{
+
+    min-width: 50rpx;
+    max-width: 200rpx;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    height: 100%;
+}
+.line{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  justify-items:center;
+  align-content:center;
+  border-left:1rpx solid #7ED321
+}
+.itemfinished{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2rpx 2rpx;
+  border: 1rpx solid gray;
+  background-color: rgb(255, 193, 193);
+  font-size: 30rpx;
+  color: rgb(112, 58, 58);
+}
+
+.item{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  border: 1rpx solid gray;
+  background-color: rgb(245, 255, 234);
+  margin: 2rpx 2rpx;
+}
+
+.item .tags {
+  display: flex;
+  max-height: 50rpx;
+}
+
+.item .tag { 
+  margin-right: 10rpx;
+  color: #7ED321;
+  font-size: 20rpx;
+  text-align: center;
+}
+
+
+.extra-detail {
+  padding: 15rpx 5px 0;
+  font-size: 28rpx;
+  color: #9B9B9B;
+}
+
+.extra-detail textarea {
+  width: 650rpx;
+}

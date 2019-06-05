@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="section">
+    <text>物品名称：</text>
+    <input placeholder="在此输入" bindinput="inputContent" auto-focus />
+  </view>
+  <view class="section">
+    <text>生产日期：</text>
+    <picker mode="date" value="{{(startdate == '') ? '点击选择':startdate}}" start="2010-01-01" bindchange="bindTimeChange">
+    <view class="picker">
+      当前选择: {{startdate}}
+    </view>
+    </picker>
+  </view>
+  <view class="section">
+    <text>保质期：/天</text>
+    <input placeholder="在此输入" bindinput="inputNum" auto-focus type="number"/>
+  </view>
+
+  
+  <button type="primary" bindtap="create"> 创 建 </button>
+</view>

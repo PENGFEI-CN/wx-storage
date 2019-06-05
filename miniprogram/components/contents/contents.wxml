@@ -1,0 +1,20 @@
+
+<view class="item-container">
+  <view class="item{{ (lastdays > 30) ? '' : 'finished'}}">
+      <view class='name'>
+        <text class="content">{{ content }}</text>
+      </view>
+      <view class='start line'>
+        <text class="content">生产日期：{{startdate}}</text>
+        <text class="content">保质期：{{days}}</text>
+      </view>
+      <view class='end line'>
+        <text class="content">有限期至：{{enddate}}</text>
+        <text class="content">{{lastdays <= 0 ?"已过期!" : "剩余日期："+lastdays}}</text>
+      </view>
+      <view class='name'>
+        <icon type="clear" size="16" catchtap="removeThing" />
+      </view>
+  </view>
+
+</view>

@@ -1,0 +1,27 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+  <view class="avatar">
+    <image src="{{ avatar }}" />
+  </view>
+  <view class="name">{{ name }}</view>
+  <view class="item" data-target="user" bindtap="navTo">
+    <text>个人信息</text>
+    <text>→</text>
+  </view>
+  <view class="item" data-target="setting" bindtap="navTo">
+    <text>设置</text>
+    <text>→</text>
+  </view>
+  <view class='item' data-target="history" bindtap='navTo'>
+    <text>历史纪录</text>
+    <text>→</text>
+  </view>
+  <view class='item' data-target="help" bindtap='navTo'>
+    <text>帮助中心</text>
+    <text>→</text>
+  </view>
+  <view class='item' data-target="feedback" bindtap='navTo'>
+    <text>反馈</text>
+    <text>→</text>
+  </view>
+</view>

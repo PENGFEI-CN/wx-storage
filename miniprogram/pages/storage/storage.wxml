@@ -1,0 +1,45 @@
+<view class="container" bindtouchstart="containerTap">
+
+  <view class="header">
+    <text class="new" bindtap="createItem">添加储物柜</text>
+  </view>
+  <block wx:if="{{ todos.length }}">
+    <view class="todos">
+      <scroll-view scroll-x="true" style="width:100%; white-space: nowrap;" >
+      <item wx:for="{{ todos }}" wx:key="id" binditemremove="onItemRemove" content="{{ item.content }}" tags="{{ item.tags }}" extra="{{ item.extra }}" finished="{{ item.finished }}" bindtap="toggleTodo" data-index="{{ index }}" class="item"></item>
+
+      </scroll-view>
+    </view>
+
+    <view class="footer">
+      <text wx:if="{{ leftCount }}">{{ leftCount }}个储物柜</text>
+      <text class="btn" wx:if="{{ todos.length > leftCount }}" bindtap="clearFinished" wx:if="{{ clearSetting }}">清空所有储物柜</text>
+    </view>
+
+    <view class='divline'></view>
+    <view class='header'>
+      <text class="new" bindtap="createThing">添加物品</text>
+    </view>
+    <scroll-view scroll-y="true" class="thingscontainer">
+      <block wx:if="{{todos[currentstorage].things != undefined}}">
+        <view class='things'>
+            <contents bindthingremove = "onThingRemove" wx:for="{{todos[currentstorage].things}}"  data-index="{{ index }}" content = "{{item.name}}" startdate = "{{item.startdate}}" enddate =  "{{item.enddate}}" days = "{{item.days}}" lastdays = "{{item.lastdate}}"></contents>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="empty">
+          <text class="title">储物柜是空的</text>
+          <text class="content">请添加储物柜中的物品信息-</text>
+        </view>
+      </block>
+    </scroll-view>
+  </block>
+
+  <block wx:else>
+    <view class="empty">
+      <text class="title">还未创建储物柜</text>
+      <text class="content">请添加储物柜</text>
+    </view>
+  </block>
+</view>
+<view class="ripple" style="{{rippleStyle}}"></view>

@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/storage/storage",
+    "pages/feedback/feedback",
+    "pages/me/me",
+    "pages/detail/detail",
+    "pages/user/user",
+    "pages/setting/setting",
+    "pages/goods/goods",
+    "pages/test/test",
+    "pages/help/help"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#7ED321",
+    "navigationBarTitleText": "储物柜",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#9B9B9B",
+    "selectedColor": "#7ED321",
+    "backgroundColor": "#F8F8F8",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "assets/todo.png",
+        "selectedIconPath": "assets/todo-active.png"
+      },
+      {
+        "pagePath": "pages/storage/storage",
+        "text": "储物柜",
+        "iconPath": "assets/history.png",
+        "selectedIconPath": "assets/history-active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "assets/me.png",
+        "selectedIconPath": "assets/me-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

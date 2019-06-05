@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "主页",
+  "usingComponents": {
+    "item": "/components/Item/Item",
+    "contents": "/components/contents/contents"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

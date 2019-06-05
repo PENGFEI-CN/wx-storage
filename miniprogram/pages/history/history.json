@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "历史",
+  "usingComponents": {
+    "item": "/components/Item/Item"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

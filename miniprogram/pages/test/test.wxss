@@ -1,0 +1,11 @@
+scroll-view {
+    width: 80%;
+    white-space: nowrap;
+}
+
+.item-content {
+    width: 40%;
+    display: inline-block;
+    border: 1rpx solid gray;
+    text-align: center;
+}
